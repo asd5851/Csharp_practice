@@ -60,8 +60,6 @@ namespace first
 
             //}
 
-
-
             Console.Write("3개의 정수를 입력하시오 : ");
             string words = Console.ReadLine(); // 입력받아서
             string[] words_tmp = words.Split(' '); // word_tmp를 띄어쓰기대로 나눠서 그것을
