@@ -256,140 +256,204 @@ namespace first
              * 반복 루프에서 continue 문을 만나게 되면 continue문 다음에 있는 후속 코드들은 실행되지 않고 건너뛴다.
              */
 
-            int mo_Count = 0;
-            int za_Count = 0;
-            for (int i = 0; ; i++)
+            //int mo_Count = 0;
+            //int za_Count = 0;
+            //for (int i = 0; ; i++)
+            //{
+            //    char.TryParse(Console.ReadLine(), out char charater);
+            //    if (charater == 'a' || charater == 'o' || charater == 'e' || charater == 'u' || charater == 'i' || character == 'A' || character == 'E' || character == 'U' || character == 'I' || character == 'O')
+            //    {
+            //        mo_Count++;
+            //    }
+            //    else if (charater == '#')
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        za_Count++;
+            //    }
+            //}
+            //Console.WriteLine("모음 : {0}", mo_Count); 49
+
+            //Console.WriteLine("자음 : {0}", za_Count);
+            //Console.WriteLine("==========================");
+
+
+            //Console.Write("숫자를 입력하세요 : "); // 숫자를 입력받는다.
+            //int.TryParse(Console.ReadLine(), out int key);
+
+            //int first = 1, second = 100;
+            //Random random = new Random(); // 랜덤 할당
+            //int count = 0;
+            //for (int i = 0; ; i++)
+            //{
+            //    Console.Write("숫자를 입력하세요 : ");
+            //    int guess = (first + second) / 2; // 컴퓨터가 추측하는 값을 
+            //    Console.WriteLine(guess);
+            //    if (guess < key) // 
+            //    {
+            //        first = guess;
+            //        count++;
+            //        Console.WriteLine("{0} 보다 큽니다", guess);
+
+            //    }
+            //    else if (guess > key)
+            //    {
+            //        second = guess; // 
+            //        count++;
+            //        Console.WriteLine("{0} 보다 작습니다.", guess);
+            //    }
+            //    else
+            //    {
+            //        count++;
+            //        Console.WriteLine("맞았어용");
+            //        Console.WriteLine("{0} 번 실행 하셨습니다.", count);
+
+            //        break;
+            //    }
+            //}
+
+
+            //Random random = new Random(); // 랜덤 할당
+
+            //char[] text = new char[] { '+', '-', '/', '*' }; // 배열로 산수규칙을 저장해놨다.
+            //for (int i = 0; ; i++)
+            //{
+            //    int first = random.Next(0, 100); 
+            //    int second = random.Next(0, 100); // 산술계산을 할 두개의 정수를 0~99사이의 수로 랜덤할당
+            //    int problem_n = random.Next(0, 4); // 배열안에 있는 인덱스를 랜덤으로 0~3까지 할당
+
+            //    Console.Write("{0} {1} {2} = ", first, text[problem_n], second); // 숫자 계산 숫자 = 답
+            //    int.TryParse(Console.ReadLine(), out int result); // 결과를 입력받는다.
+            //    if (second == 0 && text[problem_n] == '/') // 나누기의 뒤에숫자가 0일 경우 문제를 다시출제
+            //    {
+            //        Console.WriteLine("문제다시출제");
+            //    }
+            //    else if (text[problem_n] == '+') // 더하기 일 경우
+            //    {
+            //        if (result == first + second) // 더하기 수행이 결과 값과 같다면 
+            //        {
+            //            Console.WriteLine("정답입니다"); // 정답
+            //            break;
+
+            //        }
+            //        else // 틀리다면
+            //        {
+            //            Console.WriteLine("틀렸습니다."); // 다시 출제
+            //            continue;
+            //        }
+            //    }
+            //    else if (text[problem_n] == '-') // 빼기 일 경우
+            //    {
+            //        if (result == first - second) // 빼기 수행이 결과 값과 같다면 
+            //        {
+            //            Console.WriteLine("정답입니다");
+            //            break;
+
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("틀렸습니다.");
+            //            continue;
+            //        }
+            //    }
+            //    else if (text[problem_n] == '*') // 곱하기 일 경우
+            //    {
+            //        if (result == first * second) // 곱하기 수행이 결과 값과 같다면 
+            //        {
+            //            Console.WriteLine("정답입니다");
+            //            break;
+
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("틀렸습니다.");
+            //            continue;
+            //        }
+
+            //    }
+            //    else if (text[problem_n] == '/') // 나누기 일 경우
+            //    {
+
+            //        if (result == first / second) // 나누기 수행이 결과 값과 같다면 
+            //        {
+            //            Console.WriteLine("정답입니다");
+            //            break;
+
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("틀렸습니다.");
+            //            continue;
+            //        }
+            //    } // if
+
+            //} // for
+
+            /*
+             *foreach 문은 배열 이나 컬렉션(Collection) 같은 값을 여러개 담고 있는 데이터 구조에서 
+             *각각의 데이터가 들어잇는 만큼 반복하는 반복문이다. 데이터 갯수나 반복 조건을 처리할 필요가 없다.
+             */
+            // string에서 글자를 하나씩 출력
+            //string stringText = "Hello World!";
+            //int count = 0;
+            //foreach(char oneCharactor in stringText){
+            //    Console.Write("{0} ", oneCharactor);
+            //    count++;
+            //}// loop :: stringText의 길이만큼 도는 루프
+            //Console.WriteLine("\ncount : {0}, string length : {1}",count, stringText.Length);
+            int sum = 0;
+            for(int i=1;i<=100; i++)
             {
-                char.TryParse(Console.ReadLine(), out char charater);
-                if (charater == 'a' || charater == 'o' || charater == 'e' || charater == 'u' || charater == 'i' || character == 'A' || character == 'E' || character == 'U' || character == 'I' || character == 'O')
+                if(i%3==0 && i % 4 == 0)
                 {
-                    mo_Count++;
-                }
-                else if (charater == '#')
-                {
-                    break;
-                }
-                else
-                {
-                    za_Count++;
+                    sum = sum + i;
                 }
             }
-            Console.WriteLine("모음 : {0}", mo_Count); 49
+            Console.WriteLine("3의배수이면서 4의배수인 숫자의 합 : {0}",sum);
+            Console.WriteLine("=======================");
 
-            Console.WriteLine("자음 : {0}", za_Count);
-            Console.WriteLine("==========================");
-
-
-            Console.Write("숫자를 입력하세요 : "); // 숫자를 입력받는다.
-            int.TryParse(Console.ReadLine(), out int key);
-
-            int first = 1, second = 100;
-            Random random = new Random(); // 랜덤 할당
-            int count = 0;
-            for (int i = 0; ; i++)
+            Console.Write("숫자 두개를 입력하세요 : ");
+            string text = Console.ReadLine();
+            string[] text_tmp = text.Split(' ');
+            int.TryParse(text_tmp[0], out int first);
+            int.TryParse(text_tmp[1],out int second);
+            if(first > second)
             {
-                Console.Write("숫자를 입력하세요 : ");
-                int guess = (first + second) / 2; // 컴퓨터가 추측하는 값을 
-                Console.WriteLine(guess);
-                if (guess < key) // 
-                {
-                    first = guess;
-                    count++;
-                    Console.WriteLine("{0} 보다 큽니다", guess);
+                Console.WriteLine("두개를 뺀 값 : {0}", first - second);
+            }
+            else
+            {
+                Console.WriteLine("두개를 뺀 값 : {0}", second - first);
+            }
+            Console.WriteLine("=======================");
 
-                }
-                else if (guess > key)
+            
+            for (int i = 1; i <= 8; i++)
+            {
+                if (i % 2 == 0)
                 {
-                    second = guess; // 
-                    count++;
-                    Console.WriteLine("{0} 보다 작습니다.", guess);
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.WriteLine("{0} x {1} = {2}", i, j, i * j);
+                    }
                 }
-                else
-                {
-                    count++;
-                    Console.WriteLine("맞았어용");
-                    Console.WriteLine("{0} 번 실행 하셨습니다.", count);
+                Console.WriteLine();
+                
+            }
+            Console.WriteLine("=======================");
 
-                    break;
+            for (int i=1;i<=9; i++)
+            {
+                for(int j=1;j<=9; j++)
+                {
+                    if(i*10+j + j*10+i == 99)
+                    {
+                        Console.WriteLine("A = {0} Z = {1}", i, j);
+                    }
                 }
             }
-
-
-            Random random = new Random(); // 랜덤 할당
-           
-            char[] text = new char[] { '+', '-', '/', '*' }; // 배열로 산수규칙을 저장해놨다.
-            for (int i = 0; ; i++)
-            {
-                int first = random.Next(0, 100); 
-                int second = random.Next(0, 100); // 산술계산을 할 두개의 정수를 0~99사이의 수로 랜덤할당
-                int problem_n = random.Next(0, 4); // 배열안에 있는 인덱스를 랜덤으로 0~3까지 할당
-
-                Console.Write("{0} {1} {2} = ", first, text[problem_n], second); // 숫자 계산 숫자 = 답
-                int.TryParse(Console.ReadLine(), out int result); // 결과를 입력받는다.
-                if (second == 0 && text[problem_n] == '/') // 나누기의 뒤에숫자가 0일 경우 문제를 다시출제
-                {
-                    Console.WriteLine("문제다시출제");
-                }
-                else if (text[problem_n] == '+') // 더하기 일 경우
-                {
-                    if (result == first + second) // 더하기 수행이 결과 값과 같다면 
-                    {
-                        Console.WriteLine("정답입니다"); // 정답
-                        break;
-
-                    }
-                    else // 틀리다면
-                    {
-                        Console.WriteLine("틀렸습니다."); // 다시 출제
-                        continue;
-                    }
-                }
-                else if (text[problem_n] == '-') // 빼기 일 경우
-                {
-                    if (result == first - second) // 빼기 수행이 결과 값과 같다면 
-                    {
-                        Console.WriteLine("정답입니다");
-                        break;
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("틀렸습니다.");
-                        continue;
-                    }
-                }
-                else if (text[problem_n] == '*') // 곱하기 일 경우
-                {
-                    if (result == first * second) // 곱하기 수행이 결과 값과 같다면 
-                    {
-                        Console.WriteLine("정답입니다");
-                        break;
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("틀렸습니다.");
-                        continue;
-                    }
-
-                }
-                else if (text[problem_n] == '/') // 나누기 일 경우
-                {
-
-                    if (result == first / second) // 나누기 수행이 결과 값과 같다면 
-                    {
-                        Console.WriteLine("정답입니다");
-                        break;
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("틀렸습니다.");
-                        continue;
-                    }
-                } // if
-
-            } // for
         }// main
     }// class
 }
