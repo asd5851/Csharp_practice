@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security;
 using System.Text;
@@ -106,7 +107,11 @@ namespace first
             //    i++;
 
             //}
-
+            /*
+             * 문제 1
+             * 프로그램 사용자로부터 양의 정수를 하나 입력 받아서, 그 수만큰 "Hello Wolrd"를
+             * 출력하는 프로그램 작성 
+             * */
             //Console.Write("양의 정수를 입력하세요 : ");
             //int hello_count = default;
             //int.TryParse(Console.ReadLine(), out hello_count);
@@ -125,6 +130,11 @@ namespace first
             //}
             //Console.WriteLine("=====================================");
 
+            /*
+             *문제 2
+             *프로그램 사용자로부터 양의 정수를 하나 입력 받은 다음, 그 수만큼 3의 배수를 출력하는
+             *프로그램 작성
+             **/
             //i = 1;
             //Console.Write("양의 정수를 입력하세요 : ");
             //int thmulti = 0;
@@ -145,6 +155,13 @@ namespace first
             //    Console.WriteLine("=====================================");
             //}
 
+            /*
+             * 문제 3
+             * 프로그램 사용자로부터 계속해서 정수를 입력 받는다. 그리고 그 값을 계속해서 더해나간다.
+             * 이런한 작업은 프로그램 사용자가 0을 입력할 때까지 계속되어야 하며 0이 입력되면 입력된 
+             * 모든 정수의 합을 출력하고 종료.
+             */
+
             //int input_num = 1;
             //int sum = 0;
             //while(input_num != 0)
@@ -156,6 +173,11 @@ namespace first
             //Console.WriteLine("모든정수의 합 : {0}", sum);
             //Console.WriteLine("=====================================");
 
+            /*
+             * 문제 4
+             * 프로그램 사용자로부터 입력 받은 숫자에 해당하는 구구단을 출력하되, 
+             * 역순으로 출력하는 프로그램을 작성
+             */
 
             //int reverse_multi;
             //Console.Write("User input -> ");
@@ -169,6 +191,13 @@ namespace first
             //Console.WriteLine("");
             //Console.WriteLine("=====================================");
 
+            /*
+             * 문제 5
+             * 프로그램 사용자로부터 입력 받은 정수의 평균을 출력하는 프로그램을 작성하되,
+             * 다음 두 가지 조건을 만족할 것.
+             * 먼저 몇개의 정수를 입력 할 것인지 프로그램 사용자에게 묻는다. 그리고 그 수만큼 정수를 입력받는다
+             * 평균 값은 소수점 이하까지 계산해서 출력한다.
+             */
             //int loop_count = 0;
             //i = 0;
             //sum = 0;
@@ -188,7 +217,9 @@ namespace first
             //Console.WriteLine("평균값 : {0}", avl);
             //Console.WriteLine("=====================================");
 
-
+            /*
+             * 문제 6 두 실수를 입력받아서 값이 같은지 다른지 출력하는 프로그램 작성 (Equals 등 메서드 사용 x)
+             */
             //float first, second;
             //Console.WriteLine("두 실수를 입력 하시오 : ");
             //float.TryParse(Console.ReadLine(), out first);
@@ -223,6 +254,9 @@ namespace first
              * 초기식을 실행한 후에 조건식이 참인 동안, 문장을 반복한다. 한번 반복이 끝날 때마다 증감식이
              * 실행된다.
              */
+            /*
+             * 문제 7 1~100 숫자 중에서 3의 배수를 제외한 수의 합 구하기
+             */
             //int sum  = 0;
             //for(int i=0;i<=10; i++)
             //{
@@ -241,7 +275,6 @@ namespace first
             //    }
             //    else {
             //        sum = sum + i;
-
             //    }
 
             //}// loop : 100번 도는 루프
@@ -255,7 +288,11 @@ namespace first
              * continue문은 현재 수행하고 있는 반복 과정의 나머지를 건너뛰고 다음 반복 과정을 강제적으로 시작하게만든다.
              * 반복 루프에서 continue 문을 만나게 되면 continue문 다음에 있는 후속 코드들은 실행되지 않고 건너뛴다.
              */
-
+            /*
+             * LAB 1
+             * 자음과 모음 개수 세기
+             * 사용자로부터 영문자를 받아서 자음과 모음의 개수를 세는 프로그램을 작성
+             */
             //int mo_Count = 0;
             //int za_Count = 0;
             //for (int i = 0; ; i++)
@@ -279,7 +316,18 @@ namespace first
             //Console.WriteLine("자음 : {0}", za_Count);
             //Console.WriteLine("==========================");
 
-
+            /*
+             * 숫자 맞추기 게임
+             * 숫자 알아맞히기 게임이다. 프로그램은 1~100 사이의 정수를 저장하고 있음.
+             * 사용자는 질문을 통해서 숫자를 알아 맞힌다.
+             * 사용자가 답을 제시하면 프로그램은 제시된 정수가 더 낮은 값인지, 높은 값인지
+             * 사용자가 알아맞힐 때 까지 루프한다. (기본형)
+             * - 프로그램을 수정하여 컴퓨터가 생성한 숫자를 사용자가 추측하는 대신에 사용자가 결정한 번호를
+             * 컴퓨터가 추측하도록 수정한다. 사용자는 컴퓨터가 추측한 숫자가 높거나 낮은지를 컴퓨터에
+             * 알려야 한다. 컴퓨터가 맞힐 때까지 반복 (어려움)
+             * 사용자가 결정한 값의 범위는 1~100
+             * 어떤 숫자를 생각하던 간에 7번 이하의 추측으로 컴퓨터가 맞출 수 있도록 프로그램 1을 수정하시오
+            */
             //Console.Write("숫자를 입력하세요 : "); // 숫자를 입력받는다.
             //int.TryParse(Console.ReadLine(), out int key);
 
@@ -314,9 +362,15 @@ namespace first
             //    }
             //}
 
+            /*
+             * LAB 3
+             * 산수 문제 자동 출제
+             * 산수 문제를 자동으로 출제하는 프로그램을 작성해보자, 덧셈 문제들을 자동으로 생성하여야 한다.
+             * 피연산자는 0~99 사이의 숫자(난수) 
+             * 한 번 이라도 맞으면 종료. 틀리면 리트라이(기본형)
+             */
 
             //Random random = new Random(); // 랜덤 할당
-
             //char[] text = new char[] { '+', '-', '/', '*' }; // 배열로 산수규칙을 저장해놨다.
             //for (int i = 0; ; i++)
             //{
@@ -403,57 +457,80 @@ namespace first
             //    count++;
             //}// loop :: stringText의 길이만큼 도는 루프
             //Console.WriteLine("\ncount : {0}, string length : {1}",count, stringText.Length);
-            int sum = 0;
-            for(int i=1;i<=100; i++)
-            {
-                if(i%3==0 && i % 4 == 0)
-                {
-                    sum = sum + i;
-                }
-            }
-            Console.WriteLine("3의배수이면서 4의배수인 숫자의 합 : {0}",sum);
-            Console.WriteLine("=======================");
+            /*
+             * 문제 8 1~100 숫자 중에서 3의 배수이면서 4의 배수인 정수 합 구하기
+             */
 
-            Console.Write("숫자 두개를 입력하세요 : ");
-            string text = Console.ReadLine();
-            string[] text_tmp = text.Split(' ');
-            int.TryParse(text_tmp[0], out int first);
-            int.TryParse(text_tmp[1],out int second);
-            if(first > second)
-            {
-                Console.WriteLine("두개를 뺀 값 : {0}", first - second);
-            }
-            else
-            {
-                Console.WriteLine("두개를 뺀 값 : {0}", second - first);
-            }
-            Console.WriteLine("=======================");
+            //int sum = 0;
+            //for(int i=1;i<=100; i++)
+            //{
+            //    if(i%3==0 && i % 4 == 0)
+            //    {
+            //        sum = sum + i;
+            //    }
+            //}
+            //Console.WriteLine("3의배수이면서 4의배수인 숫자의 합 : {0}",sum);
+            //Console.WriteLine("=======================");
+            /*
+             * 문제 9 두개의 정수를 입력 받아서 두 수의 차를 출력하는 프로그램 작성
+             * 항상 큰수에서 작은 수를 뺀 결과를 출력할 것
+             * 결과는 언제나 0 이상 이여야 함.
+             */
 
-            
-            for (int i = 1; i <= 8; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    for (int j = 1; j <= i; j++)
-                    {
-                        Console.WriteLine("{0} x {1} = {2}", i, j, i * j);
-                    }
-                }
-                Console.WriteLine();
+            //Console.Write("숫자 두개를 입력하세요 : ");
+            //string text = Console.ReadLine();
+            //string[] text_tmp = text.Split(' ');
+            //int.TryParse(text_tmp[0], out int first);
+            //int.TryParse(text_tmp[1],out int second);
+            //if(first > second)
+            //{
+            //    Console.WriteLine("두개를 뺀 값 : {0}", first - second);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("두개를 뺀 값 : {0}", second - first);
+            //}
+            //Console.WriteLine("=======================");
+
+            /*
+             * 
+             * 문제 10 구구단을 출력하되 짝수(2단,4단,6단,8단)만 출력되도록 하는 프로그램 작성.
+             * 2단은 2x2 까지만, 4단은 4x4 까지만, ...8단은 8x8 까지만 출력한다
+             * break와 continue를 사용할 것.
+             */
+
+            //for (int i = 1; i <= 8; i++)
+            //{
+               
+            //    if (i % 2 == 0)
+            //    {                   
+            //        for (int j = 1; j <= i; j++)
+            //        {
+            //            Console.WriteLine("{0} x {1} = {2}", i, j, i * j);
+            //        }
+            //    }
+            //    Console.WriteLine();
                 
-            }
-            Console.WriteLine("=======================");
-
-            for (int i=1;i<=9; i++)
-            {
-                for(int j=1;j<=9; j++)
-                {
-                    if(i*10+j + j*10+i == 99)
-                    {
-                        Console.WriteLine("A = {0} Z = {1}", i, j);
-                    }
-                }
-            }
+            //}
+            //Console.WriteLine("=======================");
+            /*
+             * 
+             * 문제 11 다음 식을 만족하는 모든 A와 Z를 구하는 프로그램을 작성.
+             * A Z
+             * Z A
+             * ---------------
+             * 9 9
+             */
+            //for (int i=1;i<=9; i++)
+            //{
+            //    for(int j=1;j<=9; j++)
+            //    {
+            //        if(i*10+j + j*10+i == 99)
+            //        {
+            //            Console.WriteLine("A = {0} Z = {1}", i, j);
+            //        }
+            //    }
+            //}
         }// main
     }// class
 }
