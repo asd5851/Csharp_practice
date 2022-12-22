@@ -11,6 +11,7 @@
     <Compile Remove="Program.cs" />
     <Compile Remove="Program2.cs" />
     <Compile Remove="Program3.cs" />
+    <Compile Remove="Program4.cs" />
     <Compile Remove="과제_김선준_22.12.20.cs" />
   </ItemGroup>
 
