@@ -14,7 +14,11 @@
     <Compile Remove="Program3.cs" />
     <Compile Remove="Program4.cs" />
     <Compile Remove="Program5.cs" />
+    <Compile Remove="Program6.cs" />
+    <Compile Remove="Program7.cs" />
+    <Compile Remove="Program8.cs" />
     <Compile Remove="과제_김선준_22.12.20.cs" />
+    <Compile Remove="지뢰찾기.cs" />
   </ItemGroup>
 
 </Project>

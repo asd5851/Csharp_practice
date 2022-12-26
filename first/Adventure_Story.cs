@@ -97,7 +97,7 @@ namespace first
             {
                 selected_monster[sm,i] = monster_stats[sm,i]; // 몬스터 스텟을 저장해놓고
             }
-            Console.WriteLine("***************{0}을 만났습니다!***************", monster_name[sm]);
+            Console.WriteLine("***************[{0}]을 만났습니다!***************", monster_name[sm]);
 
             while (true)
             {
@@ -110,10 +110,10 @@ namespace first
                 int.TryParse(Console.ReadLine(), out int activate);
                 if (activate == 1)
                 {
-                    Console.WriteLine("***************나의 HP : {0}***************", HP);
-                    Console.WriteLine("***************{0}의 HP : {1}***************", monster_name[sm], monster_stats[sm,0]);
-                    Console.WriteLine("***************나의 공격력 : {0}***************", attack);
-                    Console.WriteLine("***************{0}의 공격력 : {1}***************", monster_name[sm], monster_stats[sm, 2]);
+                    Console.WriteLine("***************나의 HP : [{0}]***************", HP);
+                    Console.WriteLine("***************[{0}]의 HP : [{1}]***************", monster_name[sm], monster_stats[sm,0]);
+                    Console.WriteLine("***************나의 공격력 : [{0}]***************", attack);
+                    Console.WriteLine("***************[{0}]의 공격력 : [{1}]***************", monster_name[sm], monster_stats[sm, 2]);
 
 
                     Console.WriteLine("★★★★★★ 나의 공격! ★★★★★★");
@@ -128,10 +128,10 @@ namespace first
 
 
                     }
-                    Console.WriteLine("나의 남은 HP : {0}", HP);
-                    Console.WriteLine("{0}의 남은 HP : {1}", monster_name[sm], monster_stats[sm,0]);
+                    Console.WriteLine("나의 남은 HP : [{0}]", HP);
+                    Console.WriteLine("[{0}]의 남은 HP : [{1}]", monster_name[sm], monster_stats[sm,0]);
 
-                    Console.WriteLine("★★★★★★ {0}의 공격! ★★★★★★", monster_name[sm]);
+                    Console.WriteLine("★★★★★★ [{0}]의 공격! ★★★★★★", monster_name[sm]);
                     if (monster_stats[sm,2] <= defence)
                     {
                         HP--;
@@ -140,15 +140,15 @@ namespace first
                     {
                         HP = HP - monster_stats[sm,2] + defence;
                     }
-                    Console.WriteLine("나의 남은 HP : {0}", HP);
-                    Console.WriteLine("{0}의 남은 HP : {1}", monster_name[sm], monster_stats[sm,0]);
+                    Console.WriteLine("나의 남은 HP : [{0}]", HP);
+                    Console.WriteLine("[{0}]의 남은 HP : [{1}]", monster_name[sm], monster_stats[sm,0]);
                     Console.ReadLine();
 
                 }
 
                 else if (activate == 2)
                 {
-                    Console.WriteLine("***************{0}의 공격을 막았습니다.***************", monster_name[sm]);
+                    Console.WriteLine("***************[{0}]의 공격을 막았습니다.***************", monster_name[sm]);
                 }
                 else
                 {
@@ -218,11 +218,11 @@ namespace first
             player.defence = random.Next(1, 15 + 1);
 
             Console.WriteLine("**********************************************");
-            Console.WriteLine("이름\t : {0}", name);
-            Console.WriteLine("체력\t : {0}", player.HP);
-            Console.WriteLine("스태미나 : {0}", player.stamina);
-            Console.WriteLine("공격력\t : {0}", player.attack);
-            Console.WriteLine("방어력\t : {0}", player.defence);
+            Console.WriteLine("이름\t : [{0}]", name);
+            Console.WriteLine("체력\t : [{0}]", player.HP);
+            Console.WriteLine("스태미나 : [{0}]", player.stamina);
+            Console.WriteLine("공격력\t : [{0}]", player.attack);
+            Console.WriteLine("방어력\t : [{0}]", player.defence);
             Console.WriteLine("**********************************************");
             
 
@@ -253,8 +253,8 @@ namespace first
                     Console.WriteLine("(랜덤)보상을 받았습니다.");
                     Random random1 = new Random();
                     int take = random1.Next(0, 4 + 1);
-                    Console.WriteLine("{0}을 받았습니다", weapon_name[take]);
-                    Console.WriteLine("공격력이 {0} 만큼 올랐습니다.", weapon_stats[take]);
+                    Console.WriteLine("[{0}]을 받았습니다", weapon_name[take]);
+                    Console.WriteLine("공격력이 [{0}] 만큼 올랐습니다.", weapon_stats[take]);
                     player.attack = player.attack + weapon_stats[take];
                     break;
 
@@ -265,7 +265,7 @@ namespace first
                     Console.ReadLine();
 
                     Console.WriteLine("보상을 받지 못했습니다.");
-                    Console.WriteLine("스태미너가 {0}만큼 내려갔습니다.", 5);
+                    Console.WriteLine("스태미너가 [{0}]만큼 내려갔습니다.", 5);
                     player.stamina = player.stamina - 5;
                     break;
                 }
@@ -278,7 +278,6 @@ namespace first
          
             Console.ReadLine();
             ms.meet_monster(player.HP, player.stamina, player.attack, player.defence); // 몬스터 만나는 함수
-           
 
             //Console.Write("")
 
