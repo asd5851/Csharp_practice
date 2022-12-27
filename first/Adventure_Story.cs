@@ -29,7 +29,7 @@ namespace first
 
         // 몬스터의 스탯을 랜덤으로 배정한다.
         // 상위 몬스터가 하위 몬스터보다 강하게 설정한다.
-        void monster_random()
+        static void monster_random()
         {
             for(int i=0;i<5; i++)
             {
@@ -45,7 +45,7 @@ namespace first
         }
 
         // 타이틀 화면
-        void reference_title()
+        static void reference_title()
         {
             Console.WriteLine("**********************************************");
 
@@ -69,7 +69,7 @@ namespace first
         
        
         // 도망을 선택했을때
-        void run_monster(int HP, int stamina, int attack, int defence)
+        static void run_monster(int HP, int stamina, int attack, int defence)
         {
             Random run_random = new Random();
             int run = run_random.Next(1,101);
@@ -85,7 +85,7 @@ namespace first
         }
 
         // 몬스터와 싸울때
-        void battle_monster(int HP, int stamina, int attack, int defence)
+        static void battle_monster(int HP, int stamina, int attack, int defence)
         {
             monster_random(); // 전역변수에 몬스터 개체와 특성
 
@@ -175,7 +175,7 @@ namespace first
         }
 
         // 몬스터와 만났을 때
-        void meet_monster(int HP, int stamina, int attack, int defence)
+        static void meet_monster(int HP, int stamina, int attack, int defence)
         {
             Console.WriteLine("*************** 몬스터를 만났습니다! ***************");
             Console.WriteLine("   ( 몬스터 종류, 스탯은 모두 랜덤 입니다 )");

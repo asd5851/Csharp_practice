@@ -17,6 +17,9 @@
     <Compile Remove="Program6.cs" />
     <Compile Remove="Program7.cs" />
     <Compile Remove="Program8.cs" />
+    <Compile Remove="Program9.cs" />
+    <Compile Remove="Program9_Practice.cs" />
+    <Compile Remove="과제_김선준_20221226.cs" />
     <Compile Remove="과제_김선준_22.12.20.cs" />
     <Compile Remove="지뢰찾기.cs" />
   </ItemGroup>

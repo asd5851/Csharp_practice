@@ -8,9 +8,45 @@ namespace first
 {
     internal class Program8
     {
+        static int Hi()
+        {
+            Console.WriteLine("안녕하세요 11");
+            return 1;
+        }
+
+        static int Hi(string text)
+        {
+            Console.WriteLine(text);
+            return 1;
+        }
+
+        static string GetString()
+        {
+            return "반환값(Return Value)";
+        }
+
+        static int SquareFunction(int a)
+        {
+            return a * a;
+        }
+        
+        // 같은 이름의 함수에 매개변수에 차이를 준다면 가능하다 -> 오버로딩
         static void Main(string[] args)
         {
-            /*
+            int some = 100;
+            Console.WriteLine(some);
+
+            some = Hi();
+            Console.WriteLine(some);
+            Hi("안녕하세요 22");
+
+            string returnvalue = GetString();
+            Console.WriteLine(returnvalue);
+            int r = SquareFunction(14);
+            Console.WriteLine(r);
+            
+        }
+        /*
              * 함수 또는 매서드는 재사용을 목적으로 만든 특정 작업을 수행하는 코드블록이다.
              * 함수를 부르는 다양한 명칭
              * 함수(Function)
@@ -56,9 +92,14 @@ namespace first
              * [함수이름](매개변수);
              * 변수(결과값) = [함수이름](매개변수);
              */
-            show();
-        }
-        static void show()
+        
+        /*
+         * 함수를 만들고 반복해서 사용하자
+         * 함수를 만드는 목적중 하나는 반복 사용에 있다. 함수를 만들고 여러 번 호출해서
+         * 사용하는 방법을 알아보자.
+         */
+        // Hello world를 출력하는 사용자 정의 함수
+        static int show()
         {
             Console.WriteLine("hello");
             /*
@@ -66,6 +107,35 @@ namespace first
              * 없는 형태이다.
              * 
              */
+            return 0;
         }//class
+        
+        static int ParameterAndReturn()
+        {
+            /*
+             * 함수를 만들어 놓고 기능이 동일한 함수만 사용하지는 않는다. 호출할때마다
+             * 조금씩 다른 기능을 적용할 때는 함수의 매개변수를 달리하여 호출할 수 있다.
+             * 매개변수(인자, 파라미터)는 함수의 어떤 정보를 넘겨주는 데이터를 나타낸다.
+             * 이러한 매개변수는 콤마를 기준으로 여러개 설정할 수 있으며, 문자열과 숫자등
+             * 모든 데이터 형식을 사용할 수 있다.
+             * 
+             * 매개변수(인자,파라미터)가 없는 함수 : 매개변수도 없고 반환값도 없는 함수 형태는
+             * 가장 단순한 형태의 함수이다.
+             * 앞에서 사용한 함수 중에서 모든 변수에 있는 값을 문자열로 변환시키는 ToString() 매서드 처럼
+             * 빈 괄호만 있는 함수 형식을 나타낸다.
+             * 
+             * 매개변수가 있는 함수 : 특정 함수에 인자 값을 한개이상 전달하는 방식이다. 정수형, 실수형, 문자형, 문자열형, 개체형
+             * 등 여러가지 데이터 형식을 인자 값으로 전달 할 수 있다.
+             * 
+             * 반환값이 있는 함수(결과값이 있는 함수) : 함수의 처리 결과를 함수를 호출한 쪽으로 반환할 때는
+             * return 키워드를 사용하여 데이터를 돌려줄 수 있다.
+             * 
+             * 매개변수가 가변(여러개)인 함수 : C#에서는 클래스하나에 매개변수의 형식과 갯수를 달리하여
+             * 이름이 동일한 함수를 여러 개 만들 수 있다. 이를 가리켜 함수 중복 또는 함수 오버로드(Overload)라고 한다.
+             * 
+             */
+            return 0;
+        } 
+       
     }
 }
