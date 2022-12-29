@@ -1,2 +1,2 @@
-# FirstRepo
+# C#
 C# Practice Repository  
