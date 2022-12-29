@@ -9,8 +9,11 @@
 
   <ItemGroup>
     <Compile Remove="Adventure_Story.cs" />
+    <Compile Remove="Adventure_Story_Monster.cs" />
+    <Compile Remove="Description.cs" />
     <Compile Remove="Program.cs" />
     <Compile Remove="Program10.cs" />
+    <Compile Remove="Program11.cs" />
     <Compile Remove="Program2.cs" />
     <Compile Remove="Program3.cs" />
     <Compile Remove="Program4.cs" />

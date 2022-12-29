@@ -33,6 +33,9 @@ namespace first
          */
 
         //! 컴퓨터가 카드를 선택하는 함수
+        public TrumpCard() {
+            SetupTrumpCards();
+        }
         public void ComputerPickTrump()
         {
             Whois = true; // 컴퓨터의 차례 = true, 플레이어의 차례 = false
