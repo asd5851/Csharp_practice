@@ -1,2 +1,2 @@
-# FirstRepo
-오후 2:37 2022-12-15) 오늘 헬로우 월드 프로그램 해봤음.     
+# C#
+C# Practice Repository  
