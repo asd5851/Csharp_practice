@@ -21,6 +21,13 @@ namespace first
         public int experience_limit = 100;
         public string []inventory = new string[5]; // 인벤토리의 크기는 5
 
+        public string Name { get { return this.name; } private set { this.name = value; } }
+        public int Level { get { return this.level;} private set { this.level = value; } }
+        public int HP { get { return this.hp;} private set { this.hp= value; } }
+        public int Damage { get { return this.damage; } private set { this.damage= value; } }
+        public int Defence { get { return this.defence; } private set { this.defence= value; } }
+        public int Experience { get { return this.experience; } private set { this.experience= value; } }
+        public int Experience_limit { get { return this.experience_limit; } private set { this.experience_limit = value;} }
         public void LevelUP() { // 몬스터를 사냥하다가 경험치를 다채웠을떄 레벨업 함수
             this.experience_limit = this.experience_limit + this.level * 20; // 레벨업을 하면 그 다음 레벨에 필요한 경험치한계가 올라간다.
             this.level = this.level + 1; // 레벨업하면 레벨 추가
@@ -29,7 +36,7 @@ namespace first
             this.hp= this.hp + 20;
             this.experience = 0;
             Console.WriteLine("*********레벨업!**********");
-            Console.WriteLine("현재 레벨 : {0}", this.level);
+            Console.WriteLine("현재 레벨 : {0}", this.Level);
             Console.WriteLine("현재 공격력 : {0}, 현재 방어력 : {1}", this.damage, this.defence);
             Console.WriteLine("현재 체력 {0}", this.hp);
             Console.WriteLine();
@@ -53,7 +60,13 @@ namespace first
         public int defence;
         public int level;
         public string []dropitem = new string[2];
-    
+
+        public string Name { get { return this.name; } private set { this.name = value; } }
+        public int Level { get { return this.level; } private set { this.level = value; } }
+        public int HP { get { return this.hp; } private set { this.hp = value; } }
+        public int Damage { get { return this.damage; } private set { this.damage = value; } }
+        public int Defence { get { return this.defence; } private set { this.defence = value; } }
+        public string[] Dropitem { get { return this.dropitem;}private set { this.dropitem = value; } }
     }
     class GreenSlime : Monster // 몬스터의 하위 클래스( 초록슬라임)
     {

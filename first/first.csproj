@@ -23,10 +23,11 @@
     <Compile Remove="Program8.cs" />
     <Compile Remove="Program9.cs" />
     <Compile Remove="Program9_Practice.cs" />
-    <Compile Remove="과제_김선준_20221226.cs" />
+    <Compile Remove="TrumpCard.cs" />
     <Compile Remove="과제_김선준_20221227.cs" />
     <Compile Remove="과제_김선준_22.12.20.cs" />
     <Compile Remove="지뢰찾기.cs" />
+    <Compile Remove="클래스.cs" />
   </ItemGroup>
 
 </Project>

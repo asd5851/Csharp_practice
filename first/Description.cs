@@ -19,8 +19,8 @@ namespace first
             {
                 if (player.inventory[i] == null)
                 {
-                    Console.WriteLine("{0}을 얻었습니다.", monster.dropitem[drop_num]);
-                    player.inventory[i] = monster.dropitem[drop_num];
+                    Console.WriteLine("{0}을 얻었습니다.", monster.Dropitem[drop_num]);
+                    player.inventory[i] = monster.Dropitem[drop_num];
                     item_flag = true;
                     break;
                 }
@@ -53,11 +53,11 @@ namespace first
             // 전투가 끝나고 플레이어의 체력이 남았을때
             if (player.hp > 0)
             {
-                monster.hp = moster_init.hp; // 몬스터의 체력 초기화
-                player.experience += monster.level * 20; // 플레이어의 경험치 증가.
+                monster.hp = moster_init.HP; // 몬스터의 체력 초기화
+                player.experience += monster.Level * 20; // 플레이어의 경험치 증가.
                 Console.WriteLine("승리하셨습니다.");
                 inventory_check(player, monster); // 인벤토리를 체크한다.
-                Console.WriteLine("{0}의 경험치를 획득 했습니다", monster.level * 20);
+                Console.WriteLine("{0}의 경험치를 획득 했습니다", monster.Level * 20);
                 Console.WriteLine();
 
                 // 플레이어의 경험치가 한계를 넘었을 경우 레벨업
@@ -94,18 +94,18 @@ namespace first
         {
             inventory_view(player); // 인벤토리를 보여준다.
             // loop : 플레이어와 몬스터 둘중하나가 죽을때까지 루프를 돌린다.
-            while(player.hp >= 0 && monster.hp >= 0)
+            while(player.HP >= 0 && monster.hp >= 0)
             {
                 Console.WriteLine("플레이어의 공격!");
                 Console.WriteLine("[{0}]가 [{1}]를 {2}의 공격력으로 공격했다"
-                    , player.name, monster.name, player.damage);
-                player.hp = player.hp + player.defence - monster.damage;
+                    , player.Name, monster.Name, player.damage);
+                player.hp = player.hp + player.defence - monster.Damage;
                 Console.WriteLine("플레이어의 남은 생명력 : {0}", player.hp);
                 Console.WriteLine();
                 Console.WriteLine("몬스터의 공격!");
                 Console.WriteLine("[{0}]가 [{1}]를 {2}의 공격력으로 공격했다"
-                    , monster.name, player.name, monster.damage);
-                monster.hp = monster.hp + monster.defence - player.damage;
+                    , monster.Name, player.Name, monster.Damage);
+                monster.hp = monster.hp + monster.Defence - player.damage;
                 Console.WriteLine("몬스터의 남은 생명력 : {0}", monster.hp);
                 Console.WriteLine();
                 Console.ReadLine();
@@ -128,7 +128,8 @@ namespace first
 
             battle(player, bs, player_init, bs_init);
             Console.ReadLine();
-            battle(player, bs, player_init, bs_init);            
+            battle(player, bs, player_init, bs_init);     
+            
             Console.ReadLine();
             battle(player, bs, player_init, bs_init);
             Console.ReadLine();
