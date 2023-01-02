@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Compile Remove="Adventure_Story.cs" />
-    <Compile Remove="Adventure_Story_Monster.cs" />
     <Compile Remove="Description.cs" />
     <Compile Remove="Program.cs" />
     <Compile Remove="Program10.cs" />
@@ -27,6 +26,7 @@
     <Compile Remove="과제_김선준_20221227.cs" />
     <Compile Remove="과제_김선준_22.12.20.cs" />
     <Compile Remove="지뢰찾기.cs" />
+    <Compile Remove="코인먹기.cs" />
     <Compile Remove="클래스.cs" />
   </ItemGroup>
 

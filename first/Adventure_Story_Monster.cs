@@ -21,7 +21,7 @@ namespace first
         public int experience_limit = 100;
         public string []inventory = new string[5]; // 인벤토리의 크기는 5
 
-        public string Name { get { return this.name; } private set { this.name = value; } }
+        public string Name { get { return this.name; } set { this.name = value; } }
         public int Level { get { return this.level;} private set { this.level = value; } }
         public int HP { get { return this.hp;} private set { this.hp= value; } }
         public int Damage { get { return this.damage; } private set { this.damage= value; } }
